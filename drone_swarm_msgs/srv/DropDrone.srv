@@ -1,0 +1,5 @@
+# Request
+bool drop # yes/ no
+---
+# Response
+bool dropped # yes/ no

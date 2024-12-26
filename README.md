@@ -49,6 +49,48 @@ The following video is of the testing of sensor fusion with detections coming in
 
 https://github.com/darshit-desai/Project_LegionAir/assets/36150235/982f17dc-1fbe-4672-a3c1-f174a186cdca
 
+## VOXL2 Configuration
+[drone](./drone.md)
+- Provides detailed configuration instructions for VOXL2 drone setup
+- Documents system components, versions, and dependencies
+- Includes configuration files and setup commands for:
+  - VOXL TFLite Server
+  - VOXL Vision Hub
+  - VOXL Camera Server
+  - Multi-drone namespace configuration
+  - Docker container setup
+  - ROS2 workspace configuration
+  - ROS2-PX4 bridge integration
+
+## Control Vision Update
+
+The project is organized into the following ROS2 packages:
+
+### PX4-ROS2 Communication Bridge
+[px4_ros_com](./px4_ros_com/Offboard_Control_Node_Documentation.md)
+- Handles communication between PX4 flight controller and ROS2
+- Implements offboard control capabilities for autonomous flight
+- Manages drone state monitoring and command publishing
+
+### Transform Management
+[your_tf_package](./your_tf_package/Static_Transform_Broadcaster_Node_Documentation.md)
+- Manages coordinate frame transformations between different reference frames
+- Broadcasts static transforms for sensor mounting positions
+- Handles dynamic transforms for moving components
+
+### Point Cloud Processing
+[your_pointcloud_package](./your_pointcloud_package/Point_Cloud_Transformer_Node_Documentation.md)
+- Processes Time of Flight (ToF) sensor data
+- Performs point cloud filtering and registration
+- Integrates ToF data with other sensor inputs for improved localization
+
+### Drone Detection
+[tflite_prop_detection](./tflite_prop_detection/TFLite_Property_Detection_Node_Documentation.md)
+- Implements YOLOv5n model for real-time drone detection
+- Optimized for embedded GPU execution
+- Provides bounding box and confidence scores for detected drones
+
+Each package contains detailed documentation about its specific functionality, setup instructions, and node implementations.
 
 
 

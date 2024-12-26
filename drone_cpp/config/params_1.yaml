@@ -1,0 +1,8 @@
+drone_one:  # Node name
+  ros__parameters:
+    id: 1
+    anchor: false
+    phase_angle: 90.0
+    radius: 1.0
+    neighbour_left: 0
+    neighbour_right: 2

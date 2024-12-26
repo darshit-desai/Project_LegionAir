@@ -1,0 +1,5 @@
+# Request
+bool move # yes/ no
+---
+# Response
+bool moved # yes/ no

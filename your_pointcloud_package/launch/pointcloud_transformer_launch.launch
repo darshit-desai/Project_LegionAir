@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="your_pointcloud_package" type="pointcloud_transformer.py" name="pointcloud_transformer" output="screen"/>
-  <node pkg="your_pointcloud_package" type="pointcloud_transformer_rgb.py" name="pointcloud_transformer_rgb" output="screen"/>
-</launch>

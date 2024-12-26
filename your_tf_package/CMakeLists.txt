@@ -1,31 +1,31 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(your_tf_package)
 
-find_package(catkin REQUIRED COMPONENTS
-  rospy
-  tf
-)
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(tf2_ros REQUIRED)
 find_package(Eigen3 REQUIRED)
 
-catkin_package()
-
-catkin_install_python(PROGRAMS src/tf_publisher.py
-                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+include_directories(
+  ${EIGEN3_INCLUDE_DIRS}
 )
+
 ## Declare a C++ executable
 add_executable(tf_publisher_cpp src/tf_publisher_cpp_node.cpp)
+ament_target_dependencies(tf_publisher_cpp rclcpp tf2_ros)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(tf_publisher_cpp
-  ${catkin_LIBRARIES}
-  ${EIGEN3_INCLUDE_DIRS}
-)
-include_directories(
-  ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
 )
 
-install(
-  DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+install(TARGETS
+  tf_publisher_cpp
+  DESTINATION lib/${PROJECT_NAME}
 )
+
+ament_package()

@@ -1,3 +1,0 @@
-<launch>
-  <node pkg="kalman_filter_ros" type="kalman_filter_node.py" name="kalman_filter_ros" output="screen"/>
-</launch>

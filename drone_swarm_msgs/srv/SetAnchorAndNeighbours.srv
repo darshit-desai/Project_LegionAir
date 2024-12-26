@@ -1,0 +1,7 @@
+# Request
+bool anchor # yes/ no
+int32 new_neighbour #id
+bool which_side # 0:left/1:right
+---
+# Response
+bool done # yes/ no

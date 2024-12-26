@@ -1,0 +1,3 @@
+offboard_control_node:
+  ros__parameters:
+    id: 1

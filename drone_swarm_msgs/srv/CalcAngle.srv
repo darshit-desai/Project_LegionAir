@@ -1,0 +1,6 @@
+# Request
+float32 target_angle # target angle
+float32 increment # increment angle
+---
+# Response
+bool received # yes/ no
