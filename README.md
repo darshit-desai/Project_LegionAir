@@ -49,6 +49,18 @@ The following video is of the testing of sensor fusion with detections coming in
 
 https://github.com/darshit-desai/Project_LegionAir/assets/36150235/982f17dc-1fbe-4672-a3c1-f174a186cdca
 
+## VOXL2 Configuration
+[drone](./drone.md)
+- Provides detailed configuration instructions for VOXL2 drone setup
+- Documents system components, versions, and dependencies
+- Includes configuration files and setup commands for:
+  - VOXL TFLite Server
+  - VOXL Vision Hub
+  - VOXL Camera Server
+  - Multi-drone namespace configuration
+  - Docker container setup
+  - ROS2 workspace configuration
+  - ROS2-PX4 bridge integration
 
 ## Control Vision Update
 
@@ -80,16 +92,5 @@ The project is organized into the following ROS2 packages:
 
 Each package contains detailed documentation about its specific functionality, setup instructions, and node implementations.
 
-### VOXL2 Configuration
-[drone](./drone.md)
-- Provides detailed configuration instructions for VOXL2 drone setup
-- Documents system components, versions, and dependencies
-- Includes configuration files and setup commands for:
-  - VOXL TFLite Server
-  - VOXL Vision Hub
-  - VOXL Camera Server
-  - Multi-drone namespace configuration
-  - Docker container setup
-  - ROS2 workspace configuration
-  - ROS2-PX4 bridge integration
+
 
